@@ -34,4 +34,5 @@ for i in range(n):
         break
 
 print(winner)
-print(final[0] + 1, final[1] + 1)
+if winner != 0:
+    print(final[0] + 1, final[1] + 1)
