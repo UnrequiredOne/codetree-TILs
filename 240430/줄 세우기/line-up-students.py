@@ -15,7 +15,7 @@ for i in range(n):
     s = student(h, w, i+1)
     arr.append(s)
 
-arr.sort(key=lambda x: (-x.h, -x.w, -x.n))
+arr.sort(key=lambda x: (-x.h, -x.w, x.n))
 
 for i in range(n):
     arr[i].print_info()
