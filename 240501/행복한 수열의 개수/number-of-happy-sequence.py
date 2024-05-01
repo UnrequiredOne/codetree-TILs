@@ -15,6 +15,7 @@ for i in range(n):
         else:
             if cnt >= m:
                 answer += 1
+                break
             prev_val = arr[i][j]
             cnt = 1
     
@@ -30,6 +31,7 @@ for i in range(n):
         else:
             if cnt >= m:
                 answer += 1
+                break
             prev_val = arr[j][i]
             cnt = 1
     if cnt >= m:
