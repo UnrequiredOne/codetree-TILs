@@ -25,7 +25,7 @@ for i in range(n):
                         stack.append((nx, ny))
                         visited.append((nx, ny))
 
-            if cost < value * m:
+            if cost <= value * m:
                 values.append(value)
 
 if len(values) != 0:
