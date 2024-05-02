@@ -7,15 +7,14 @@ dy = [0, 1, 0, -1]
 
 for i in range(n):
     for j in range(n):
-        for k in range(n):
+        for k in range(n + 1):
             cost, value = 2 * k * (k + 1) + 1, 0
             stack = [(i, j)]
-            visited = []
-            visited.append((i, j))
+            visited = [(i, j)]
 
-            while(stack):
+            while stack:
                 x, y = stack.pop(0)
-                
+
                 if arr[x][y] == 1:
                     value += 1
 
@@ -30,7 +29,6 @@ for i in range(n):
 
 if len(values) != 0:
     values.sort(reverse=True)
-
     print(values[0])
 else:
     print(0)
