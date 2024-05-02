@@ -28,5 +28,6 @@ for i in range(n):
             if cost < value * m:
                 values.append(value)
 
-values.sort()
-print(values[-1])
+values.sort(reverse=True)
+
+print(values[0])
