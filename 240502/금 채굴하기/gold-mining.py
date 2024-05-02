@@ -10,7 +10,7 @@ for i in range(n):
         for k in range(n):
             cost, value = 2 * k * (k + 1) + 1, 0
             stack = [(i, j)]
-            visited = []]
+            visited = []
             visited.append((i, j))
 
             while(stack):
