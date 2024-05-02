@@ -10,8 +10,9 @@ for i in range(n):
         for k in range(n):
             cost, value = 2 * k * (k + 1) + 1, 0
             stack = [(i, j)]
-            visited = set()
-            visited.add((i, j))
+            visited = []]
+            visited.append((i, j))
+
             while(stack):
                 x, y = stack.pop(0)
                 
@@ -22,10 +23,10 @@ for i in range(n):
                     nx, ny = x + dx[a], y + dy[a]
                     if 0 <= nx < n and 0 <= ny < n and abs(nx - i) + abs(ny - j) <= k and (nx, ny) not in visited:
                         stack.append((nx, ny))
-                        visited.add((nx, ny))
+                        visited.append((nx, ny))
 
             if cost < value * m:
                 values.append(value)
-                
+
 values.sort()
 print(values[-1])
