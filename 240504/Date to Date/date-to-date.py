@@ -4,7 +4,7 @@ months = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 answer = 0
 if a == c:
-    answer = d - b
+    answer = d - b + 1
 else:
     for i in range(a+1, c):
         answer += months[i]
