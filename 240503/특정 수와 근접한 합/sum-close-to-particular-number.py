@@ -3,8 +3,8 @@ arr = list(map(int, input().split()))
 arr_sum = sum(arr)
 m = arr_sum
 
-for i in range(n-1):
-    for j in range(i+1, n):
+for i in range(n):
+    for j in range(n):
         if i == j:
             continue
 
