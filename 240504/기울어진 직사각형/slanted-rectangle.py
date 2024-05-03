@@ -25,8 +25,12 @@ for i in range(n):
                 if cnt == 0:
                     break
                 cnt = 0
-                k = (k+1) % 4
+                k += 1
+                if k == 4:
+                    break
 
-        m = max(m, tmp)
+        if k == 4:
+            m = max(m, tmp)
+        
 
 print(m)
