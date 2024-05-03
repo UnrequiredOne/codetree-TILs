@@ -1,7 +1,7 @@
 n, s = map(int, input().split())
 arr = list(map(int, input().split()))
 arr_sum = sum(arr)
-m = arr_sum
+m = arr_sum * arr_sum
 
 for i in range(n):
     for j in range(n):
