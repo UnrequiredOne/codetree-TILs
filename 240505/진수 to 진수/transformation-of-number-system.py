@@ -2,8 +2,8 @@ a, b = map(int, input().split())
 n = input()
 
 num = 0
-for i in range(len(n) - 1 , -1, -1):
-    num += pow(a, i)
+for i in range(0, len(n)):
+    num = num * a + int(n[i])
 
 answer = []
 while num != 0:
