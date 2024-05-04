@@ -5,7 +5,7 @@ m1, d1, m2, d2 = map(int, input().split())
 d = input()
 t_d = day.index(d)
 
-target = sum(months[i] for i in range(m1 + 1, m2)) + months[m1] - d1 + d2
+target = sum(months[i] for i in range(m1, m2)) - d1 + d2
 answer, cnt = target // 7, target % 7
 
 if cnt >= t_d:
