@@ -11,5 +11,6 @@ elif m1 < m2:
     answer = sum(months[m1+1:m2]) + months[m1] - d1 + d2
 elif m1 > m2:
     answer = sum(months[m2+1:m1]) + months[m2] - d2 + d1
+    answer *= -1
 
 print(day[(answer % 7)])
