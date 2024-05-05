@@ -8,6 +8,7 @@ for i in range(n):
         for j in range(x):
             arr[idx] += 1
             idx -= 1
+
     elif cmd == 'R':
         for j in range(x):
             arr[idx] += 1
@@ -15,8 +16,9 @@ for i in range(n):
 
 answer = 0
 
-for item in arr:
-    if item >= 2:
-        answer += 1
+dots = []
+for i in range(len(arr)):
+    if arr[i] >= 2:
+        dots.append(i)
 
-print(answer)
+print(len(dots))
