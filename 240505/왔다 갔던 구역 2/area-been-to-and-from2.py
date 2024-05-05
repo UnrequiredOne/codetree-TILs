@@ -6,12 +6,12 @@ for i in range(n):
     x = int(x)
     if cmd == 'L':
         for j in range(x):
-            idx -= 1
             arr[idx] += 1
+            idx -= 1
     elif cmd == 'R':
         for j in range(x):
-            idx += 1
             arr[idx] += 1
+            idx += 1
 
 answer = 0
 
