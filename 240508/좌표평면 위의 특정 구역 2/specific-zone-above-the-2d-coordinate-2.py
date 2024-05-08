@@ -15,6 +15,9 @@ for i in range(n):
         continue
     s.append(area)
 
-answer = min(s)
+if not s:
+    answer = 0
+else:
+    answer = min(s)
 
 print(answer)
