@@ -1,8 +1,11 @@
 n = int(input())
 arr = list(map(int, input().split()))
 
-ben = [0 for _ in range(n)]
+max_profit = 0
 for i in range(n - 1):
-    ben[i] = max(arr[i + 1:]) - arr[i]
+    for j in range(i + 1, n):
+        profit = arr[j] - arr[i]
+        if max_profit < profit:
+            max_profit = profit
 
-print(max(ben))
+print(max_profit)
