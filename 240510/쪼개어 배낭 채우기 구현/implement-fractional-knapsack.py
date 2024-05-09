@@ -9,7 +9,7 @@ arr.sort(key=lambda x: x[2], reverse=True)
 idx = 0
 w, v = 0, 0
 
-while m > 0:
+while m > 0 and idx <= len(arr):
     target = arr[idx]
     if m >= target[0]:
         m -= target[0]
