@@ -3,12 +3,26 @@ arr = []
 
 for i in range(n):
     k, num = map(int, input().split())
-    for j in range(k):
-        arr.append(num)
+    arr.append([k, num])
 
-s = []
-m = len(arr) // 2
-for i in range(0, m):
-    s.append(arr[i] + arr[len(arr) - 1 - i])
+arr.sort(key=lambda x: x[1])
+
+s = set()
+i, j = 0, len(arr) - 1
+while i != j:
+    a, b = arr[i], arr[j]
+    s.add(a[1] + b[1])
+    if a[0] < b[0]:
+        b[0] -= a[0]
+        a[0] = 0
+        i += 1
+    elif a[0] > b[0]:
+        a[0] -= b[0]
+        b[0] = 0
+        j -= 1
+    else:
+        a[0], b[0] = 0, 0
+        i += 1
+        j -= 1
 
 print(max(s))
