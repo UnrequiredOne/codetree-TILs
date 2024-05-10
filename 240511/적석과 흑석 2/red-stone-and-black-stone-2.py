@@ -4,25 +4,26 @@ blackstones = []
 
 for i in range(c):
     redstones.append(int(input()))
-redstones.sort(reverse=True)
+redstones.sort()
 
 for i in range(n):
     a, b = map(int, input().split())
     blackstones.append((a, b))
-blackstones.sort(key=lambda x: -x[1])
+blackstones.sort(key=lambda x: x[0])
 
 answer = 0
-i, j = 0, 0
-while i < c and j < n:
-    r = redstones[i]
-    b = blackstones[j]
+r_idx, b_idx = 0, 0
+
+while r_idx < c and b_idx < n:
+    r = redstones[r_idx]
+    b = blackstones[b_idx]
     if b[0] <= r <= b[1]:
         answer += 1
-        i += 1
-        j += 1
+        r_idx += 1
+        b_idx += 1
     elif b[0] > r:
-        j += 1
+        r_idx += 1
     elif b[1] < r:
-        i += 1
+        b_idx += 1
 
 print(answer)
