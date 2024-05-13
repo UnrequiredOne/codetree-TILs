@@ -27,7 +27,5 @@ for i in range(x1, x2):
             if max_y < j:
                 max_y = j
 
-answer = (max_x - min_x + 1) * (max_y - min_y + 1)
-if answer <= 0:
-    answer = 0
+answer = (max_x - min_x + 1) * (max_y - min_y + 1) if (max_x - min_x + 1) > 0 and (max_y - min_y + 1) else 0
 print(answer)
