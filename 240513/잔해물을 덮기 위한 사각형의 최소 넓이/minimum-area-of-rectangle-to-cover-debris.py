@@ -14,7 +14,7 @@ for i in range(_x1, _x2):
     for j in range(_y1, _y2):
         arr[i][j] = 0
 
-min_x, min_y, max_x, max_y = x2, y2, x1, y1
+min_x, min_y, max_x, max_y = 2001, 2001, 0, 0
 for i in range(x1, x2):
     for j in range(y1, y2):
         if arr[i][j] == 1:
@@ -27,4 +27,7 @@ for i in range(x1, x2):
             if max_y < j:
                 max_y = j
 
-print((max_x - min_x + 1) * (max_y - min_y + 1))
+answer = (max_x - min_x + 1) * (max_y - min_y + 1)
+if answer <= 0:
+    answer = 0
+print(answer)
