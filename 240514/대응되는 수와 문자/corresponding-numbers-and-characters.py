@@ -3,13 +3,12 @@ d = dict()
 
 for i in range(n):
     data = input()
-    if data not in d:
-        d[data] = 0
-    d[data] += 1
+    d[data] = i
 
+li = list(d.keys())
 for i in range(m):
     data = input()
     if data.isdigit():
-        print(list(d.keys())[int(data) - 1])
+        print(li[int(data) - 1])
     else:
-        print(list(d.keys()).index(data) + 1)
+        print(d[data] + 1)
