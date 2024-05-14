@@ -9,8 +9,7 @@ for i in range(n):
 
 for i in range(m):
     data = input()
-    if ord('a') <= ord(data) <= ord('z'):
-        print(list(d.keys()).index(data) + 1)
+    if data.isdigit():
+        print(list(d.keys())[int(data) - 1])
     else:
-        idx = int(data)
-        print(list(d.keys())[idx-1])
+        print(list(d.keys()).index(data) + 1)
