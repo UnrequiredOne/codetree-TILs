@@ -17,7 +17,7 @@ for i in range(m):
 
 answer = -1
 
-for t in range(1, 1000001):
+for t in range(1, time):
     if arr_1[t] == arr_2[t]:
         answer = t
         break
