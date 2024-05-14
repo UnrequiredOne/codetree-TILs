@@ -10,7 +10,7 @@ for item in arr:
 answer = 0
 for item in d:
     if k - item in d and k != item * 2:
-        answer += 1
+        answer += d[k - item] * d[item]
     elif k - item == item:
         answer += (n - 1) * n
 
