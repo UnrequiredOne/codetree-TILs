@@ -12,6 +12,6 @@ for item in d:
     if k - item in d and k != item * 2:
         answer += d[k - item] * d[item]
     elif k - item == item:
-        answer += (n - 1) * n
+        answer += (d[item] - 1) * d[item]
 
 print(answer // 2)
