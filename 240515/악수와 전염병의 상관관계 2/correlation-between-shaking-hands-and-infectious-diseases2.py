@@ -24,7 +24,7 @@ for x, y in time_table:
             devs[y][1] -= 1
             devs[x][0] = 1
             devs[x][1] = k
-        elif devs[x][1]:
+        elif devs[x][0]:
             devs[y][1] -= 1
 
 for i in range(1, n+1):
