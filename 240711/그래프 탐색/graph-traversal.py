@@ -6,6 +6,7 @@ visited = [0 for _ in range(n + 1)]
 for _ in range(m):
     x, y = map(int, input().split())
     arr[x][y] = 1
+    arr[y][x] = 1
 
 
 def dfs(v):
