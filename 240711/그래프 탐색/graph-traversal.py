@@ -13,7 +13,7 @@ def dfs(v):
 
     for i in range(1, len(arr[v])):
         if arr[v][i] == 1 and visited[i] == 0:
-            visited[i] = True
+            visited[i] = 1
             cnt += dfs(i)
 
     return cnt
